@@ -1,0 +1,48 @@
+@startuml
+
+class Main {
+    + main(args: String[])
+}
+
+class Alumnos {
+    - nombre: String
+    + getNombre(): String
+    + setNombre(nombre: String): void
+    + RegistroTotal(): String
+}
+
+class Universidad {
+    - uname: String
+    + getUname(): String
+    + setUname(uname: String): void
+    + RegistroTotal(): String
+}
+
+class Curso {
+    - Cname: int
+    - Nalumnos: int
+    + getCname(): int
+    + setCname(cname: int): void
+    + getNalumnos(): int
+    + setNalumnos(nalumnos: int): void
+    + RegistroTotal(): String
+    + RegistroTotal2(): String
+}
+
+class Materia {
+    - Nmateria: String
+    - Cmateria: int
+    + getNmateria(): String
+    + setNmateria(nmateria: String): void
+    + getCmateria(): int
+    + setCmateria(cmateria: int): void
+    + RegistroTotal(): String
+    + RegistroTotal2(): String
+}
+
+Main --> Alumnos : uses
+Main --> Universidad : uses
+Main --> Curso : uses
+Main --> Materia : uses
+
+@enduml
